@@ -1,12 +1,15 @@
 package com.student;
 
+import java.sql.SQLException;
 import java.util.*;
 import java.util.List;
 import java.util.Scanner;
 
+import com.student.service.StudentManagementSytem;
+
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		 
 		StudentManagementSytem studentManagementSytem=new StudentManagementSytem();
 		while(true) {
@@ -24,7 +27,9 @@ public class Main {
 			 id=scan.nextInt();
 			System.out.println("Enter the student name");
 			studentName=scan.next();
+			scan.nextLine();
 			System.out.println("Enter the student course id");
+			
 			courseId=scan.nextInt();
 			System.out.println("Enter the student age");
 			 age=scan.nextInt();
@@ -40,11 +45,7 @@ public class Main {
 			 id=scan.nextInt();
 			System.out.println("Enter the new student name");
 			studentName=scan.next();
-			System.out.println("Enter the new  course id");
-			courseId=scan.nextInt();
-			System.out.println("Enter the new age");
-			 age=scan.nextInt();
-			studentManagementSytem.updateStudent(id, age, courseId, studentName);
+			studentManagementSytem.updateStudent(id,studentName);
 			break;
 		case 4:
 			System.out.println("Enter the student id");

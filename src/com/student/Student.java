@@ -1,15 +1,15 @@
 package com.student;
 
 public class Student {
-	int id;
-	int age;
-	int couseId;
-	String name;
+	private int id;
+	private int age;
+	private int courseId;
+	private String name;
 	public Student(int id, int age, int couseId, String name) {
 		super();
 		this.id = id;
 		this.age = age;
-		this.couseId = couseId;
+		this.courseId = couseId;
 		this.name = name;
 		
 	}
@@ -25,11 +25,11 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getCouseId() {
-		return couseId;
+	public int getCourseId() {
+		return courseId;
 	}
 	public void setCouseId(int couseId) {
-		this.couseId = couseId;
+		this.courseId = couseId;
 	}
 	public String getName() {
 		return name;
@@ -40,7 +40,7 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "id :"+id+"Age: "+age+"courseId:"+couseId+"Student name:"+name;
+		return "id :"+id+"Age: "+age+"courseId:"+courseId+"Student name:"+name;
 	}
 
 }
